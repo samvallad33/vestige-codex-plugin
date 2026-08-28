@@ -1,0 +1,21 @@
+{
+  "name": "vestige-codex-plugin",
+  "interface": {
+    "displayName": "Vestige"
+  },
+  "plugins": [
+    {
+      "name": "vestige",
+      "source": {
+        "source": "local",
+        "path": "./plugins/vestige"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity",
+      "description": "Local-first Vestige memory for Codex. MCP tools: recall, smart_ingest, backfill. Launches npx -y vestige-mcp-server@2.3.0."
+    }
+  ]
+}

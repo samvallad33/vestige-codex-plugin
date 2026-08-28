@@ -1,0 +1,37 @@
+{
+  "name": "vestige",
+  "version": "1.0.0",
+  "description": "Local-first Vestige memory for Codex CLI. Causal Backfill over MCP tools recall, smart_ingest, and backfill.",
+  "author": {
+    "name": "Sam Valladares",
+    "url": "https://github.com/samvallad33"
+  },
+  "homepage": "https://github.com/samvallad33/vestige-codex-plugin",
+  "repository": "https://github.com/samvallad33/vestige-codex-plugin",
+  "license": "MIT",
+  "keywords": [
+    "vestige",
+    "mcp",
+    "memory",
+    "local-first",
+    "codex-plugin",
+    "causal-backfill"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Vestige",
+    "shortDescription": "Local-first agent memory with Causal Backfill",
+    "longDescription": "Launches vestige-mcp-server locally via npx and exposes three MCP tools: recall, smart_ingest, and backfill. Memories stay on your machine. This wrapper is a distribution plugin for local and synthetic use, not a hosted production service.",
+    "developerName": "Sam Valladares",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://github.com/samvallad33/vestige",
+    "defaultPrompt": [
+      "Recall what we decided about this project's datastore.",
+      "Ingest that we rejected MySQL in favor of Postgres for JSONB support.",
+      "Backfill the earlier decision that caused this failure."
+    ],
+    "brandColor": "#06b6d4"
+  }
+}

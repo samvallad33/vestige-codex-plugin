@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "vestige": {
+      "command": "npx",
+      "args": ["-y", "vestige-mcp-server@2.3.0"]
+    }
+  }
+}
