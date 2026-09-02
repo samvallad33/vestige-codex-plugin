@@ -22,7 +22,7 @@
   "interface": {
     "displayName": "Vestige",
     "shortDescription": "Local-first agent memory with Causal Backfill",
-    "longDescription": "Launches vestige-mcp-server locally via npx and exposes three MCP tools: recall, smart_ingest, and backfill. Memories stay on your machine. This wrapper is a distribution plugin for local and synthetic use, not a hosted production service.",
+    "longDescription": "Launches vestige-mcp-server@2.7.1 locally via npx and exposes three MCP tools: recall, smart_ingest, and backfill. Memories stay on your machine. This wrapper is a distribution plugin for local and synthetic use, not a hosted production service.",
     "developerName": "Sam Valladares",
     "category": "Productivity",
     "capabilities": ["Read", "Write"],

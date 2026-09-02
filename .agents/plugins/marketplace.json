@@ -15,7 +15,7 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Productivity",
-      "description": "Local-first Vestige memory for Codex. MCP tools: recall, smart_ingest, backfill. Launches npx -y vestige-mcp-server@2.3.0."
+      "description": "Local-first Vestige memory for Codex. MCP tools: recall, smart_ingest, backfill. Launches npx -y vestige-mcp-server@2.7.1."
     }
   ]
 }

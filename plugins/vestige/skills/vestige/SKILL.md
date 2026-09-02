@@ -25,4 +25,4 @@ Do not invent other Vestige tool names. Do not send memories to a remote store. 
 
 - Never ingest secrets, API keys, passwords, or tokens.
 - On first launch the server may download an embedding model once; later runs are offline.
-- Ubuntu 22.04 and Debian 12 support lands in vestige-mcp-server v2.4.0. This plugin pins `@2.3.0`.
+- This plugin pins `vestige-mcp-server@2.7.1`.
