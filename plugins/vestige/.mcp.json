@@ -2,7 +2,7 @@
   "mcpServers": {
     "vestige": {
       "command": "npx",
-      "args": ["-y", "vestige-mcp-server@2.3.0"]
+      "args": ["-y", "vestige-mcp-server@2.7.1"]
     }
   }
 }

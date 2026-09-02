@@ -2,21 +2,22 @@
 
 Codex CLI marketplace wrapper for [Vestige](https://github.com/samvallad33/vestige) — local-first Rust MCP memory with Causal Backfill.
 
-This repo is a **GitHub plugin marketplace**, not a hosted production service. It launches `vestige-mcp-server@2.3.0` on your machine and exposes three tools: `recall`, `smart_ingest`, `backfill`.
+This repo is a **GitHub plugin marketplace**, not a hosted production service. It launches `vestige-mcp-server@2.7.1` on your machine and exposes three tools: `recall`, `smart_ingest`, `backfill`.
 
 ## Install (Codex plugin)
 
 ```bash
+npm install -g vestige-mcp-server@2.7.1
 codex plugin marketplace add samvallad33/vestige-codex-plugin
 codex plugin add vestige@vestige-codex-plugin
 ```
 
-Requires [Codex CLI](https://github.com/openai/codex) and Node.js (`npx`). After install, start a new Codex session.
+Requires [Codex CLI](https://github.com/openai/codex) and Node.js. After install, start a new Codex session.
 
-Direct MCP equivalent (writes `~/.codex/config.toml` `[mcp_servers.vestige]`):
+Direct MCP equivalent (writes `~/.codex/config.toml` `[mcp_servers.vestige]`). Use the **absolute** path from `which vestige-mcp` (macOS / Linux) or `where vestige-mcp` (Windows), not a bare command name:
 
 ```bash
-codex mcp add vestige -- npx -y vestige-mcp-server
+codex mcp add vestige -- /absolute/path/to/vestige-mcp
 ```
 
 If `vestige-mcp` is already on `PATH`, GUI / config-file clients should use its **absolute** path, not a bare command name.
@@ -32,17 +33,16 @@ If `vestige-mcp` is already on `PATH`, GUI / config-file clients should use its 
 Memories stay in a local SQLite store. Default location is the OS per-user data directory. There is **no** `--project` flag. Isolate a repo with `--data-dir`:
 
 ```bash
-codex mcp add vestige -- npx -y vestige-mcp-server -- --data-dir /absolute/path/to/.vestige
+codex mcp add vestige -- /absolute/path/to/vestige-mcp -- --data-dir /absolute/path/to/.vestige
 ```
 
 Or set `VESTIGE_DATA_DIR`. `--data-dir` wins over the env var.
 
 ## Requirements
 
-- Node.js (for `npx -y vestige-mcp-server@2.3.0`)
+- Node.js (for `npm install -g vestige-mcp-server@2.7.1`)
 - Codex CLI with plugin support
-- Prebuilt server binaries in `2.3.0` for macOS (Apple Silicon and Intel), Linux x86_64, and Windows x86_64
-- **Ubuntu 22.04 and Debian 12:** wait for `vestige-mcp-server` **v2.4.0**
+- Prebuilt server binaries in `2.7.1` for macOS (Apple Silicon and Intel), Linux x86_64 (including Ubuntu 22.04 and Debian 12), and Windows x86_64
 
 First launch may download an embedding model (~130MB). Later runs do not need the network.
 
@@ -53,7 +53,7 @@ This wrapper is for **local and synthetic** use. It is not a production hosted m
 ```
 .agents/plugins/marketplace.json   Codex marketplace catalog
 plugins/vestige/.codex-plugin/plugin.json
-plugins/vestige/.mcp.json          launches npx -y vestige-mcp-server@2.3.0
+plugins/vestige/.mcp.json          launches npx -y vestige-mcp-server@2.7.1
 plugins/vestige/skills/vestige/SKILL.md
 ```
 
